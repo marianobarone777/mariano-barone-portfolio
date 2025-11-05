@@ -8,10 +8,9 @@ import Habilidades from './sections/Habilidades'
 import Proyectos from './sections/Proyectos'
 import Automatizacion from './sections/Automatizacion'
 import Contacto from './sections/Contacto'
-
+import cvPdf from './assets/Mariano_Barone_CV.pdf'   // ← importar el PDF
 
 export default function App(){
-  const base = import.meta.env.BASE_URL
   return (
     <div>
       <Navbar />
@@ -31,12 +30,7 @@ export default function App(){
             <div className="card" role="region" aria-label="Descargar CV">
               <h2>Descargar CV</h2>
               <p>Descarga el CV en PDF con toda la información actualizada.</p>
-              <a
-                href={`${base}Mariano_Barone_CV.pdf`}
-                download
-                className="btn btn-primary"
-                title="Descargar archivo PDF del CV"
-              >
+              <a href={cvPdf} download className="btn btn-primary" title="Descargar archivo PDF del CV">
                 Descargar CV
               </a>
             </div>
