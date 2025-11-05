@@ -10,11 +10,13 @@ import Automatizacion from './sections/Automatizacion'
 import Contacto from './sections/Contacto'
 
 export default function App(){
+  const base = import.meta.env.BASE_URL
   return (
     <div>
       <Navbar />
       <Header />
-      <main>
+
+      <main role="main" aria-label="Contenido principal">
         <Resumen />
         <Experiencia />
         <Formacion />
@@ -22,21 +24,25 @@ export default function App(){
         <Proyectos />
         <Automatizacion />
         <Contacto />
+
         <section id="cv" className="section">
           <div className="container">
-            <div className="card">
+            <div className="card" role="region" aria-label="Descargar CV">
               <h2>Descargar CV</h2>
-              <p>Descarga el Curriculum Vitae resumido en PDF y actualizado.</p>
-              <a href="/Mariano_Barone_CV.pdf" download className="btn btn-primary">Descargar CV</a>
+              <p>Descarga el CV en PDF con toda la información actualizada.</p>
+              <a
+                href={`${base}Mariano_Barone_CV.pdf`}
+                download
+                className="btn btn-primary"
+                title="Descargar archivo PDF del CV"
+              >
+                Descargar CV
+              </a>
             </div>
           </div>
         </section>
       </main>
-      <footer className="section">
-        <div className="container" style={{textAlign:'center', color:'#94a3b8'}}>
-          <small>© {new Date().getFullYear()} Mariano Barone — Todos los derechos reservados.</small>
-        </div>
-      </footer>
     </div>
   )
 }
+
