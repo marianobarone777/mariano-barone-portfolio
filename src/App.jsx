@@ -9,6 +9,7 @@ import Proyectos from './sections/Proyectos'
 import Automatizacion from './sections/Automatizacion'
 import Contacto from './sections/Contacto'
 
+
 export default function App(){
   const base = import.meta.env.BASE_URL
   return (

@@ -3,6 +3,7 @@ import Section from '../components/Section'
 import ProjectCard from '../components/ProjectCard'
 import Lightbox from '../components/Lightbox'
 
+
 export default function Proyectos(){
   const base = import.meta.env.BASE_URL
   const [open, setOpen] = useState(false)

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Header(){
   // Agrega el prefijo correcto según el base de Vite
   const base = import.meta.env.BASE_URL
